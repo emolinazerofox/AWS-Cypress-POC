@@ -14,7 +14,7 @@ pipeline {
         // we can load the record key variable from credentials store
         // see https://jenkins.io/doc/book/using/using-credentials/
         
-        CYPRESS_RECORD_KEY = credentials('cypress-example-kitchensink-record-key')
+        CYPRESS_RECORD_KEY = 93f22266-e8f3-4453-8e2f-6c388b420bf9
       }
 
       steps {
