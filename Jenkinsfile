@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker 'node:13-alpine'
+        docker 'cypress/base:20.9.0'
     }
     environment {
         npm_config_cache = 'npm-cache'
