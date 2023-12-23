@@ -18,6 +18,7 @@ pipeline {
       }
 
       steps {
+        sh 'npm update'
         sh 'npm ci'
         sh "npm run test:ci:record"
       }
