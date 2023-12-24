@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent any {
+        image 'cypress/base:20.9.0'
+    }
     environment {
         npm_config_cache = 'npm-cache'
     }
