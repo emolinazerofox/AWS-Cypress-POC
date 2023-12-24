@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    options {
-        // Timeout counter starts AFTER agent is allocated
-        timeout(time: 1, unit: 'SECONDS')
-    }
     environment {
         npm_config_cache = 'npm-cache'
     }
