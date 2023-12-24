@@ -19,8 +19,8 @@ pipeline {
 
       steps {
         //sh 'npm update'
-        sh 'sudo npm ci'
-        sh "sudo npm run test:ci:record"
+        sh 'npm ci'
+        sh "npm run test:ci:record"
       }
     }
   }
