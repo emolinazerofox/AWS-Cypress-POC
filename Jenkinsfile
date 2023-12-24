@@ -1,10 +1,7 @@
 pipeline {
-  agent {
-    // this image provides everything needed to run Cypress
-    docker {
-      image 'cypress/base:20.9.0'
+    agent {
+        docker { image 'node:20.10.0-alpine3.19' }
     }
-  }  
     environment {
         npm_config_cache = 'npm-cache'
     }
