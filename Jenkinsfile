@@ -1,6 +1,8 @@
 pipeline {
-    agent {
-        docker 'cypress/base:20.9.0'
+    agent any
+    options {
+        // Timeout counter starts AFTER agent is allocated
+        timeout(time: 1, unit: 'SECONDS')
     }
     environment {
         npm_config_cache = 'npm-cache'
