@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'node:20.10.0-alpine3.19' }
+        docker { image 'node:17.9.0-alpine3.19' }
     }
     environment {
         npm_config_cache = 'npm-cache'
