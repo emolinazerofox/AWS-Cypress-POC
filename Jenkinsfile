@@ -18,9 +18,9 @@ pipeline {
       }
 
       steps {
-        sh 'sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash'
-        sh 'sudo npm config get prefix'
-        sh 'sudo nvm install node'
+        sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash'
+        sh 'npm config get prefix'
+        sh 'nvm install node'
         //sh 'ls | grep package-lock'
         //sh 'npm ci'
         //sh "npm run test:ci:record"
