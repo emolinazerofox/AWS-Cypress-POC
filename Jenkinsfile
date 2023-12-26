@@ -18,7 +18,6 @@ pipeline {
       }
 
       steps {
-        sh 'whoami'
         sh 'npm config get prefix'
         sh 'chown -R 115:122 "/.npm"'
         sh 'npm ci'
