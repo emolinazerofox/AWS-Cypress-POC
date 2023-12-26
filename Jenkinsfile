@@ -19,7 +19,7 @@ pipeline {
 
       steps {
         sh 'npm config get prefix'
-        sh 'npm update'
+        sh 'nvm install node'
         //sh 'ls | grep package-lock'
         //sh 'npm ci'
         //sh "npm run test:ci:record"
