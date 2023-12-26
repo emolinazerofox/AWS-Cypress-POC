@@ -18,7 +18,8 @@ pipeline {
       }
 
       steps {
-        sh 'npm ci'
+          sh 'echo "hello"'
+        //sh 'npm ci'
         //sh "npm run test:ci:record"
       }
     }
