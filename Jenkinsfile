@@ -18,9 +18,14 @@ pipeline {
       }
 
       steps {
-        sh 'wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
-        //sh 'export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" [ -s "$NVM_DIR/nvm.sh" ] && "$NVM_DIR/nvm.sh"'
-        sh 'npm config get prefix'
+         nvm(nvmInstallURL: 'https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh', 
+             nvmIoJsOrgMirror: 'https://iojs.org/dist',
+             nvmNodeJsOrgMirror: 'https://nodejs.org/dist', 
+             version: '8.1.2') {
+                    sh "npm install"
+                    echo "Build main site distribution"
+                    sh "npm run build:dist"
+              }        sh 'npm config get prefix'
         sh 'nvm install node'
         //sh 'ls | grep package-lock'
         //sh 'npm ci'
