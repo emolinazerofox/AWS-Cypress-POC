@@ -18,7 +18,7 @@ pipeline {
       }
 
       steps {
-        sh 'npm install'
+        sh 'npm update'
         //sh 'ls | grep package-lock'
         //sh 'npm ci'
         //sh "npm run test:ci:record"
