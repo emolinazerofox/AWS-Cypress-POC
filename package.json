@@ -7,17 +7,7 @@
   "scripts": {
     "cypress:info": "cypress info",
     "cypress:verify": "cypress verify",
-    "cypress:version": "cypress version",
-    "lint": "eslint examples",
-    "lint:json": "eslint --ext .json examples",
-    "start": "echo Call npm start from each example subfolder!",
-    "stop-only": "stop-only --folder examples --skip node_modules --skip dist --skip .cache --skip build",
-    "test:ci": "node ./test-examples",
-    "test:ci:brave": "node ./test-examples --brave",
-    "test:ci:chrome": "node ./test-examples --chrome",
-    "test:ci:chrome:headless": "node ./test-examples --chrome --headless",
-    "test:ci:firefox": "node ./test-examples --firefox",
-    "warn-only": "stop-only --warn --folder examples --skip node_modules"
+    "cypress:version": "cypress version"
   },
   "husky": {
     "hooks": {
@@ -60,8 +50,6 @@
     "jsonwebtoken": "8.5.1",
     "lit-element": "2.3.1",
     "lodash": "4.17.19",
-    "micro": "9.3.4",
-    "micro-cookie": "1.2.0",
     "minimist": "1.2.3",
     "morgan": "1.9.1",
     "object-to-xml": "2.0.0",
