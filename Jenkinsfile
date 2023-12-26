@@ -1,7 +1,7 @@
 pipeline {
     agent {
     // this image provides everything needed to run Cypress
-    dockerContainer {
+    docker {
       image 'cypress/base:20.9.0'
     }
   }
