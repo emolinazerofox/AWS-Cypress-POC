@@ -3,7 +3,6 @@ pipeline {
     // this image provides everything needed to run Cypress
     docker {
       image 'cypress/base:20.9.0'
-      args '--entrypoint='
     }
   }
 
