@@ -16,26 +16,21 @@ pipeline {
         
         CYPRESS_RECORD_KEY = "293f22266-e8f3-4453-8e2f-6c388b420bf9"
       }
-    stage("Build") {
+
       steps {
-            env.ECHO_CMD = 'echo $NVM_BIN'
-            env.NVM_BIN = sh (
-               script: 'bash -l -c "source $HOME/.nvm/nvm.sh 1>&2; nvm use $NODE_VERSION 1>&2 || nvm install $NODE_VERSION 1>&2 && nvm use $NODE_VERSION 1>&2 && $ECHO_CMD "',
-               returnStdout: true
-            ).trim()
-            echo "NVM_BIN: ${env.NVM_BIN}"
-            env.PATH = "${env.NVM_BIN}:${env.PATH}"
-          
-            // do some node stuff in sh commands...
-            sh 'node --version'
-            sh 'npm --version'
-           
-        }
-      //steps {
+         nvm(nvmInstallURL: 'https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh', 
+             nvmIoJsOrgMirror: 'https://iojs.org/dist',
+             nvmNodeJsOrgMirror: 'https://nodejs.org/dist', 
+             version: '8.1.2') {
+                    sh "npm install"
+                    echo "Build main site distribution"
+                    sh "npm run build:dist"
+              }        sh 'npm config get prefix'
+        sh 'nvm install node'
         //sh 'ls | grep package-lock'
         //sh 'npm ci'
         //sh "npm run test:ci:record"
-     // }
+      }
     }
   }
 }
