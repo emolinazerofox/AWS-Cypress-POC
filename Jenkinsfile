@@ -29,7 +29,7 @@ pipeline {
             // do some node stuff in sh commands...
             sh 'node --version'
             sh 'npm --version'
-           }
+           
         }
       //steps {
         //sh 'ls | grep package-lock'
