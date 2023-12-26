@@ -19,7 +19,7 @@ pipeline {
 
       steps {
         sh 'npm config get prefix'
-        sh 'sudo chown -R 115:122 "/.npm"'
+        sh 'chown -R 115:122 "/.npm"'
         sh 'npm ci'
         //sh "npm run test:ci:record"
       }
