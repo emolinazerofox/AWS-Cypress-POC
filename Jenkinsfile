@@ -19,7 +19,7 @@ pipeline {
 
       steps {
         sh 'npm config get prefix'
-        sh 'npm ci'
+        sh 'npm update'
         //sh "npm run test:ci:record"
       }
     }
