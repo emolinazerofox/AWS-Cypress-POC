@@ -18,6 +18,7 @@ pipeline {
       }
 
       steps {
+        sh 'pwd'
         sh 'npm config get prefix'
         sh 'npm update'
         //sh "npm run test:ci:record"
