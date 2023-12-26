@@ -162,15 +162,9 @@
   "engines": {
     "node": "^18.16.0"
   },
-  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cypress-io/cypress-example-recipes.git"
-  },
-  "homepage": "https://github.com/cypress-io/cypress-example-recipes#readme",
-  "author": "Brian Mann",
-  "bugs": {
-    "url": "https://github.com/cypress-io/cypress-example-recipes/issues"
+    "url": "https://github.com/emolinazerofox/AWS-Cypress-POC.git"
   },
   "lint-staged": {
     "*.js": [
