@@ -18,7 +18,7 @@ pipeline {
       }
 
       steps {
-        ch 'npm config get prefix'
+        sh 'npm config get prefix'
         sh 'npm update'
         //sh 'ls | grep package-lock'
         //sh 'npm ci'
