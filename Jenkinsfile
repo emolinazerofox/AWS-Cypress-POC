@@ -1,11 +1,20 @@
 pipeline {
-    agent any
+  agent any
+  tools {nodejs "node" }
   stages {
-    stage('build and test') {
+    stage('Cloning Git') {
       steps {
-          sh 'echo "hello"'
-        //sh 'npm ci'
-        //sh "npm run test:ci:record"
+        git 'https://github.com/emolinazerofox/AWS-Cypress-POC.git'
+      }
+    }
+    stage('Build') {
+       steps {
+         sh 'npm install'
+       }
+    }
+    stage('Test') {
+      steps {
+        sh 'npm test'
       }
     }
   }
