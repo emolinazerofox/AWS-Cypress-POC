@@ -9,7 +9,7 @@ agent any
     stage('test'){
         steps{
             script{
-                    def image = docker.image('cypress/base:12.16.0')
+                    def image = docker.image('cypress/base:latest')
                     image.pull()
                     image.inside() {
                         sh 'id'
