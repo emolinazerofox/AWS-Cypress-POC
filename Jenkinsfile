@@ -9,6 +9,7 @@ agent {
     environment {
        CHROME_BIN = '/bin/google-chrome'
        NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
+       CYPRESS_CACHE_FOLDER = '~/.cache/Cypress'
     }
     stages{
     stage('test'){
