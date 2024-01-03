@@ -12,6 +12,7 @@ agent any
                     def image = docker.image('cypress/base:latest')
                     image.pull()
                     image.inside() {
+                        args '-u root:root'
                         sh 'id'
                         sh 'ls -lrt'
                         sh 'npm ci'
