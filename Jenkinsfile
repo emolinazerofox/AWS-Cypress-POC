@@ -1,21 +1,30 @@
-pipeline {
-    agent {
-    // this image provides everything needed to run Cypress
+pipeline{
+agent {
     docker {
-      image 'cypress/base:20.9.0'
+        image 'node:15-alpine'
+        args '-u root:root'
+        reuseNode true
     }
-  }
-
-  stages {
-    stage('build and test') {
-      environment {
-        // we will be recording test results on Cypress Cloud
-        // to record we need to set an environment variable
-        // we can load the record key variable from credentials store
-        // see https://jenkins.io/doc/book/using/using-credentials/
-        CYPRESS_RECORD_KEY = credentials('293f22266-e8f3-4453-8e2f-6c388b420bf9')
+}
+    environment {
+       CHROME_BIN = '/bin/google-chrome'
+       NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
+    }
+    stages{
+    stage('test'){
+        steps{
+            script{
+                    //def image = docker.image('cypress/base:12.16.0')
+                    //image.pull()
+                    //image.inside() {
+                        sh 'id'
+                        sh 'ls -lrt'
+                        sh 'npm ci'
+                        sh 'npx cypress run --record --key 93f22266-e8f3-4453-8e2f-6c388b420bf9'
+                    //}
+              }
+          }
       }
+    }
+}
 
-      steps {
-          sh 'echo "hello"'
-        //sh 'npm ci'
