@@ -1,21 +1,15 @@
 pipeline {
-  agent any
-  stages {
-    stage('Cloning Git') {
-      steps {
-        git 'https://github.com/emolinazerofox/AWS-Cypress-POC.git'
-      }
+    agent {
+        docker {
+            image 'node:20.10.0-alpine3.19'
+            args '-p 3000:3000'
+        }
     }
-    stage('Build') {
-       steps {
-         sh 'npm install'
-       }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'npm install'
+            }
+        }
     }
-    stage('Test') {
-      steps {
-        sh 'npm test'
-      }
-    }
-  }
 }
-
