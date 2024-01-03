@@ -4,7 +4,7 @@ stages{
     stage('test'){
         steps{
             script{
-                    def image = docker.image('node:14-alpine')
+                    def image = docker.image('cypress:base')
                     image.pull()
                     image.inside() {
                         sh 'id'
