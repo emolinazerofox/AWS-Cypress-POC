@@ -12,9 +12,11 @@ agent any
                     def image = docker.image('cypress/base:latest')
                     image.pull()
                     image.inside() {
+                        sh 'pwd'
                         sh 'id'
                         sh 'ls -lrt'
                         sh 'npm ci'
+                        sh 'cd /.cache/Cypress/13.6.2/Cypress/Cypress/13.6.2/Cypress/Cypress'
                         sh 'npx cypress run --record --key 93f22266-e8f3-4453-8e2f-6c388b420bf9'
                     }
               }
