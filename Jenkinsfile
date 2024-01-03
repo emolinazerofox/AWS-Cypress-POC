@@ -16,9 +16,6 @@ agent any
                         sh 'npm ci'
 
                 sh 'npm ci --prefer-offline --no-audit'
-                sh 'rm node_modules/.ngcc_lock_file || true'
-                sh 'npm run ngcc'
-                sh 'rm -rf reports'
                     }
               }
           }
