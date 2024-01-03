@@ -1,5 +1,5 @@
 {
-  "name": "cypress-example-recipes",
+  "name": "AWS-Cypress-POC",
   "version": "0.0.0",
   "description": "This repo contains various recipes for testing common scenarios in your application using Cypress.",
   "private": true,
