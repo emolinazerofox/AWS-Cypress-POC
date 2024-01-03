@@ -14,7 +14,11 @@ agent any
                         sh 'id'
                         sh 'ls -lrt'
                         sh 'npm ci'
-                        sh 'cypress:info'
+                                        sh "git config --global safe.directory '*'"
+                sh 'npm ci --prefer-offline --no-audit'
+                sh 'rm node_modules/.ngcc_lock_file || true'
+                sh 'npm run ngcc'
+                sh 'rm -rf reports'
                     }
               }
           }
