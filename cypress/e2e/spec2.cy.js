@@ -1,5 +1,5 @@
 describe('template spec', () => {
-  it('Chrome',{ browser: 'chrome' } , () => {
+  it('Chrome',{ browser: 'electron' } , () => {
     cy.visit('https://cloud-qa.zerofox.com')
   })
 })
