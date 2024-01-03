@@ -9,7 +9,7 @@ stages{
                     image.inside() {
                         sh 'id'
                         sh 'ls -lrt'
-                        sh 'node yarn install'
+                        sh 'sudo npm install --global yarn'
                     }
               }
           }
