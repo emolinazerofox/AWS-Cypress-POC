@@ -1,6 +1,10 @@
 pipeline{
 agent any
-stages{
+    environment {
+       CHROME_BIN = '/bin/google-chrome'
+      
+   }
+    stages{
     stage('test'){
         steps{
             script{
@@ -10,6 +14,7 @@ stages{
                         sh 'id'
                         sh 'ls -lrt'
                         sh 'npm ci'
+                        sh 'npm run cypress:ci'
                     }
               }
           }
