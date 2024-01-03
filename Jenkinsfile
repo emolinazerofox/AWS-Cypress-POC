@@ -14,8 +14,7 @@ agent any
                         sh 'id'
                         sh 'ls -lrt'
                         sh 'npm ci'
-
-                sh 'npm ci --prefer-offline --no-audit'
+                        sh 'npx cypress run --record --key 93f22266-e8f3-4453-8e2f-6c388b420bf9'
                     }
               }
           }
