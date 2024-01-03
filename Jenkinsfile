@@ -1,16 +1,18 @@
-pipeline {
-    agent {
-        docker {
-            image 'node:20.10.0-alpine3.19'
-            args '-p 3000:3000'
-        }
-    }
-    stages {
-        stage('Build') {
-            steps {
-                sh 'sudo chown -R 992:992 "/.npm"'
-                sh 'npm install'
-            }
-        }
+pipeline{
+agent any
+stages{
+    stage('test'){
+        steps{
+            script{
+                    def image = docker.image('mhart/alpine-node:8.11.3')
+                    image.pull()
+                    image.inside() {
+                        sh 'id'
+                        sh 'ls -lrt'
+                        sh 'node yarn install'
+                    }
+              }
+          }
+      }
     }
 }
