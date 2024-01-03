@@ -14,7 +14,7 @@ agent any
                         sh 'id'
                         sh 'ls -lrt'
                         sh 'npm ci'
-                        sh 'npm run cypress:ci'
+                        sh 'cypress:info'
                     }
               }
           }
