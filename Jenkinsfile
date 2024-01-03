@@ -2,7 +2,8 @@ pipeline{
 agent any
     environment {
        CHROME_BIN = '/bin/google-chrome'
-   }
+       NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
+    }
     stages{
     stage('test'){
         steps{
