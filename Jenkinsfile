@@ -1,7 +1,7 @@
 pipeline{
 agent {
     docker {
-        image 'node:15-alpine'
+        image 'cypress/base:12.16.0'
         args '-u root:root'
         reuseNode true
     }
