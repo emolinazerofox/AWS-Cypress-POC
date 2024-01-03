@@ -1,5 +1,11 @@
 pipeline{
-agent any
+agent {
+    docker {
+        image 'node:15-alpine'
+        args '-u root:root'
+        reuseNode true
+    }
+}
     environment {
        CHROME_BIN = '/bin/google-chrome'
        NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
