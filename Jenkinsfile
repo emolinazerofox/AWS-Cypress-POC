@@ -14,7 +14,7 @@ agent any
                     image.inside() {
                         sh 'id'
                         sh 'ls -lrt'
-                        sh 'npm install -g cypress --unsafe-perm --silent'
+                        sh 'npx install -g cypress --unsafe-perm --silent'
                         sh 'npm ci'
                         sh 'npx cypress run --record --key 93f22266-e8f3-4453-8e2f-6c388b420bf9'
                     }
