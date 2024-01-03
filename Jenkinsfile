@@ -16,11 +16,15 @@ pipeline {
         CYPRESS_RECORD_KEY = credentials('293f22266-e8f3-4453-8e2f-6c388b420bf9')
       }
 
+    stage('Build') {
+       steps {
+         sh 'npm install'
+       }
+    }
+    stage('Test') {
       steps {
-        //sh 'echo "hello"'
-        sh 'npm ci'
-	
+        sh 'npm test'
       }
     }
   }
-}
+
