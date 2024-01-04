@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "npx cypress run --record --key 93f22266-e8f3-4453-8e2f-6c388b420bf9 --parallel"
+    "cypress run": "npx cypress run --record --key 93f22266-e8f3-4453-8e2f-6c388b420bf9 --parallel"
   },
   "husky": {
     "hooks": {
