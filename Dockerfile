@@ -1,5 +1,5 @@
 # use Cypress provided image with all dependencies included
-FROM cypress/included:latest
+FROM cypress/base:20.9.0
 RUN node --version
 RUN npm --version
 WORKDIR /home/node/app
