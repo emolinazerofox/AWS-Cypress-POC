@@ -1,7 +1,7 @@
 pipeline{
     agent {
         docker { image 'cypress/included:latest' 
-            reuseNode true // <- this is if you need to access the workspace
+            //reuseNode true // <- this is if you need to access the workspace
         } 
     }
     environment {
@@ -28,6 +28,5 @@ pipeline{
               }
           }
       }
-    }
 }
 
