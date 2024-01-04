@@ -1,9 +1,8 @@
 pipeline{
-agent{
-    dockerfile {
-      filename 'Dockerfile'
-      reuseNode true // <- this is if you need to access the workspace
-    }    
+    agent {
+        docker { image 'cypress/included:latest' 
+            reuseNode true // <- this is if you need to access the workspace
+        } 
     environment {
        CHROME_BIN = '/bin/google-chrome'
        NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
