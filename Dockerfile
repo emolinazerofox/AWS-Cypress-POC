@@ -1,5 +1,5 @@
 # use Cypress provided image with all dependencies included
-FROM cypress/base:20.9.0
+FROM cypress/included:latest
 RUN node --version
 RUN npm --version
 WORKDIR /home/node/app
@@ -20,3 +20,5 @@ ENV CI=1
 RUN npm ci
 # check if the binary was installed successfully
 RUN npx cypress verify
+
+ENTRYPOINT [""]
