@@ -5,9 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "cypress:info": "cypress info",
-    "cypress:verify": "cypress verify",
-    "cypress:version": "cypress version"
+    "npx cypress run --record --key 93f22266-e8f3-4453-8e2f-6c388b420bf9 --parallel"
   },
   "husky": {
     "hooks": {
