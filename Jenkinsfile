@@ -15,7 +15,7 @@ agent any
                         sh 'pwd'
                         sh 'id'
                         sh 'ls -lrt'
-                        ch 'npx cypress verify'
+                        sh 'npx cypress verify'
                         sh 'npm ci'
                         //sh 'npx cypress install && npm run cypress'
                         //sh 'npx cypress run --record --key 93f22266-e8f3-4453-8e2f-6c388b420bf9'
