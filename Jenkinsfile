@@ -5,6 +5,7 @@ pipeline{
         } 
     }
     environment {
+       args '-e PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
        CHROME_BIN = '/bin/google-chrome'
        NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
        CYPRESS_CACHE_FOLDER = '~/.cache/Cypress/13.6.2/Cypress/Cypress'
