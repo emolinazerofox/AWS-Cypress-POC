@@ -6,11 +6,11 @@ pipeline{
             //reuseNode true // <- this is if you need to access the workspace
         } 
     }
-    environment {
+    //environment {
        //CHROME_BIN = '/bin/google-chrome'
        //NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
        //CYPRESS_CACHE_FOLDER = '~/.cache/Cypress/13.6.2/Cypress/Cypress'
-    }
+    //}
     
     stages{
     stage('test'){
