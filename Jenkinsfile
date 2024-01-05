@@ -7,9 +7,9 @@ pipeline{
         } 
     }
     environment {
-       CHROME_BIN = '/bin/google-chrome'
-       NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
-       CYPRESS_CACHE_FOLDER = '~/.cache/Cypress/13.6.2/Cypress/Cypress'
+       //CHROME_BIN = '/bin/google-chrome'
+       //NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
+       //CYPRESS_CACHE_FOLDER = '~/.cache/Cypress/13.6.2/Cypress/Cypress'
     }
     
     stages{
