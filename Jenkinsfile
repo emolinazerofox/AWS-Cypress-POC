@@ -1,4 +1,4 @@
-pipeline{
+-pipeline{
     agent {
         docker { 
             image 'cypress/included:latest'
@@ -20,7 +20,7 @@ pipeline{
                     //image.pull()
                     //image.inside() {
                         sh 'pwd'
-                        sh 'sh 'echo $PATH'
+                        sh 'echo $PATH'
                         sh 'id'
                         sh 'ls -lrt'
                         //sh 'npx cypress verify'
