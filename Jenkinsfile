@@ -3,7 +3,7 @@ pipeline {
         docker { 
             image 'cypress/included:latest'
             args '-e PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
-            reuseNode true // <- this is if you need to access the workspace
+            // reuseNode true // <- this is if you need to access the workspace
         } 
 
     }
