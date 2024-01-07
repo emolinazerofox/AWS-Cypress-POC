@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "open": "cypress open",
-    "test-electron": "cypress run"
+    "test-electron": "cypress run",
     "test-chrome": "cypress run --browser chrome"
   },
   "husky": {
