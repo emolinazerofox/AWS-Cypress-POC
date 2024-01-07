@@ -4,13 +4,14 @@ pipeline {
             image 'cypress/included:latest'
             args '-e PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
             reuseNode true // <- this is if you need to access the workspace
-        } 
-        options {
+                    options {
 skipDefaultCheckout(true)
 parallelsAlwaysFailFast()
 disableConcurrentBuilds()
 buildDiscarder(logRotator(numToKeepStr: ‘20’, artifactNumToKeepStr: ‘20’))
 }
+        } 
+
     }
     environment {
        CHROME_BIN = '/bin/google-chrome'
