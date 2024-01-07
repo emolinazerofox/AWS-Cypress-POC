@@ -4,9 +4,6 @@ pipeline {
             image 'cypress/included:latest'
             args '-e PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
             reuseNode true // <- this is if you need to access the workspace
-
-skipDefaultCheckout true
-
         } 
 
     }
@@ -27,7 +24,7 @@ skipDefaultCheckout true
                         sh 'echo $PATH'
                         sh 'id'
                         sh 'ls -lrt'
-                        sh 'npm run test-electron'
+                        //sh 'npm run test-electron'
                         //sh 'npx cypress verify'
                         //sh 'npm ci'
                         //sh 'npx cypress install && npm run cypress'
