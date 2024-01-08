@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "open": "cypress open",
-    "test-electron": "cypress run",
-    "test-chrome": "cypress run"
+    "test-electron": "cypress run --record",
+    "test-chrome": "cypress run --record"
   },
   "husky": {
     "hooks": {
