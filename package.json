@@ -7,7 +7,7 @@
   "scripts": {
     "open": "cypress open",
     "test-electron": "cypress run",
-    "test-chrome": "cypress run --browser chrome"
+    "test-chrome": "cypress run"
   },
   "husky": {
     "hooks": {
