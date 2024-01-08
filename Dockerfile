@@ -21,4 +21,6 @@ RUN npm ci
 # check if the binary was installed successfully
 RUN npx cypress verify
 
+CMD [ "npx", "cypress", "run" ]
+
 ENTRYPOINT ["cypress"]
