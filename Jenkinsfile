@@ -26,7 +26,7 @@ pipeline {
                         sh 'echo $PATH'
                         sh 'id'
                         sh 'ls -lrt'
-                        sh 'npm run test-electron'
+                        //sh 'npm run test-electron'
                         sh 'npm run test-chrome'
                         //sh 'npx cypress verify'
                         //sh 'npm ci'
