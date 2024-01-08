@@ -1,8 +1,8 @@
 describe('template spec', () => {
-  it('Chrome', { browser: 'electron' }, () => {
+  it('Electron', { browser: 'electron' }, () => {
     cy.visit('https://example.cypress.io')
   })
-  it('Electron', { browser: 'electron' }, () => {
+  it('Chrome', { browser: 'chrome' }, () => {
     cy.visit('https://google.com')
   })
 })
