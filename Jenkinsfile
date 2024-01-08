@@ -13,7 +13,7 @@ pipeline {
        CHROME_BIN = '/bin/google-chrome'
        NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
        NO_COLOR=1
-       CYPRESS_RECORD_KEY = credentials('93f22266-e8f3-4453-8e2f-6c388b420bf9')
+       CYPRESS_RECORD_KEY = '93f22266-e8f3-4453-8e2f-6c388b420bf9'
         //CYPRESS_CACHE_FOLDER = '~/.cache/Cypress/13.6.2/Cypress/Cypress'
     }
     
