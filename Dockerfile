@@ -6,7 +6,7 @@ WORKDIR /home/node/app
 # copy our test application
 COPY package.json package-lock.json ./
 COPY app ./app
-# COPY serve.json ./
+COPY serve.json ./
 COPY scripts ./scripts
 # copy Cypress tests
 COPY cypress.config.js cypress ./
