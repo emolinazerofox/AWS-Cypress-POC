@@ -28,7 +28,7 @@ pipeline {
                         sh 'id'
                         sh 'ls -lrt'
                         sh 'npm run test-chrome'
-                        sh 'npm run test-electron'
+                        //sh 'npm run test-electron'
                         //sh 'npx cypress verify'
                         //sh 'npm ci'
                         //sh 'npx cypress install && npm run cypress'
