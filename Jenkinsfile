@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker { 
             image 'cypress/included:latest'
-            args '-e PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+            //args '-e PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
             args "-u root"
             //args '--entrypoint='''
             // reuseNode true // <- this is if you need to access the workspace
